@@ -29,15 +29,26 @@ settings =
 		},
 	},
 	android = {
+		usesFeatures =
+        {
+            { name="android.hardware.camera", required=false },
+            { name="android.hardware.camera.autofocus", required=false },
+        },
 		usesPermissions = {
 			"android.permission.CAMERA",
+			"android.permission.VIBRATE",
 		}
 	},
 	plugins = {
 		["plugin.cardIO"] =
 	        {
 	            publisherId = "tech.scotth",
-	            supportedPlatforms = { iphone=true, android=true }
+	            supportedPlatforms = { 
+	                iphone = true,
+	                android = true,
+	                osx = false,
+	                win32 = false
+            	},
 	        },
 	},
 }
